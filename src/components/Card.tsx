@@ -19,7 +19,6 @@ const Card = (props: CardProps) => {
           </div>
         </div>
       </div>
-      <h1>AM DICU IMENS</h1>
     </>
   );
 };
