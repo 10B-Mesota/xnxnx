@@ -1,7 +1,7 @@
 type CardProps = {
-  name: String;
-  sorce: String;
-  text: String;
+  name: string;
+  sorce: string;
+  text: string;
 };
 
 const Card = (props: CardProps) => {
