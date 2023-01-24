@@ -11,13 +11,13 @@ const Card = (props: CardProps) => {
         <div className="card-body">
            <figure>
           <div className="w-24 rounded-xl">
-            <img src={props.sorce} />
+            <img src={props.sorce} className="object-fill h-24 w-24"  />
           </div>
         </figure>
           <h2 className="card-title">{props.name}</h2>
-          <p className="text-center align-text-top">{props.text}</p>
+          <p className="align-text-top break-words">{props.text}</p>
           <div className="card-actions justify-end">
-            <button className="btn-secondary btn">Apply now</button>
+            <button className="bg-green-500 text-emerald-100 font-bold py-2 px-4 rounded-full hover:bg-green-700 hover:">Apply now</button>
           </div>
         </div>
       </div>
