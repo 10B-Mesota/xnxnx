@@ -13,7 +13,7 @@ export const Navbar = () => {
       <nav className='flex items-center flex-wrap bg-green-400 p-3 '>
         <Link href='/' className='inline-flex items-center p-2 mr-4 '>
             <span className='text-xl text-white font-bold uppercase tracking-wide'>
-              Am pula GIGANTICA
+              
             </span>
         </Link>
         <button
@@ -53,3 +53,5 @@ export const Navbar = () => {
     </>
   );
 };
+
+//https://dev.to/andrewespejo/how-to-design-a-simple-and-beautiful-navbar-using-nextjs-and-tailwindcss-26p1
