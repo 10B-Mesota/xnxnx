@@ -1,38 +1,55 @@
-export default function Navbar() {
-    return (
-      <nav className="navigation">
-        <a href="/" className="brand-name">
-          MacroSoft
-        </a>
-        <button className="hamburger">
-          {/* icon from heroicons.com */}
+import Link from 'next/link';
+import { useState } from 'react';
+
+export const Navbar = () => {
+  const [active, setActive] = useState(false);
+
+  const handleClick = () => {
+    setActive(!active);
+  };
+
+  return (
+    <>
+      <nav className='flex items-center flex-wrap bg-green-400 p-3 '>
+        <Link href='/' className='inline-flex items-center p-2 mr-4 '>
+            <span className='text-xl text-white font-bold uppercase tracking-wide'>
+              Am pula GIGANTICA
+            </span>
+        </Link>
+        <button
+          className=' inline-flex p-3 hover:bg-green-600 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+          onClick={handleClick}
+        >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="white"
+            className='w-6 h-6'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'
+            xmlns='http://www.w3.org/2000/svg'
           >
             <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
-              clipRule="evenodd"
+              strokeLinecap='round'
+              strokeLinejoin='round'
+              strokeWidth={2}
+              d='M4 6h16M4 12h16M4 18h16'
             />
           </svg>
         </button>
         <div
-          className="navigation-menu">
-          <ul>
-            <li>
-              <a href="/home">Home</a>
-            </li>
-            <li>
-              <a href="/about">About</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
+          className={`${
+            active ? '' : 'hidden'
+          }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
+        >
+          <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start  flex flex-col lg:h-auto'>
+            <Link href='/' className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white '>
+                Home
+            </Link>
+            <Link href='/' className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-green-600 hover:text-white'>
+                About Us
+            </Link>
+          </div>
         </div>
       </nav>
-    );
-}
+    </>
+  );
+};
