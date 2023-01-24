@@ -1,21 +1,23 @@
 type CardProps = {
   name: String;
+  sorce: String;
+  text: String;
 };
 
 const Card = (props: CardProps) => {
   return (
     <>
       <div className="card w-96 bg-base-100 shadow-xl">
-        <figure>
+        <div className="card-body">
+           <figure>
           <div className="w-24 rounded-xl">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Allah-green-transparent.svg/1024px-Allah-green-transparent.svg.png" />
+            <img src={props.sorce} />
           </div>
         </figure>
-        <div className="card-body">
           <h2 className="card-title">{props.name}</h2>
-          <p>What color is your Bugatti</p>
+          <p className="text-center align-text-top">{props.text}</p>
           <div className="card-actions justify-end">
-            <button className="btn-secondary btn">Buy Now</button>
+            <button className="btn-secondary btn">Apply now</button>
           </div>
         </div>
       </div>
