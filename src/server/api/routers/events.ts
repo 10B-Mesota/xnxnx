@@ -58,4 +58,18 @@ export const eventRouter = createTRPCRouter({
 
     return events;
   }),
+  setEventPhoto: publicProcedure
+    .input(z.object({ event_name: z.string(), photo_link: z.string() }))
+    .mutation(async ({ ctx, input }) => {
+      const event = ctx.prisma.event.update({
+        where: {
+          name: input.event_name,
+        },
+        data: {
+          photo_link: input.photo_link,
+        },
+      });
+
+      return event;
+    }),
 });
