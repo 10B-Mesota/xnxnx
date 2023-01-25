@@ -7,8 +7,8 @@ type CardProps = {
 const Card = (props: CardProps) => {
   return (
     <>
-      <div className="card w-96 bg-base-100 shadow-xl">
-        <div className="card-body">
+      <div className="card w-2/5 h-1/2 bg-base-100 shadow-xl ">
+        <div className="card-body ">
            <figure>
           <div className="w-24 rounded-xl">
             <img src={props.sorce} className="object-fill h-24 w-24"  />
