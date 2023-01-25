@@ -6,7 +6,7 @@ generator client {
 }
 
 datasource db {
-    provider = "sqlite"
+    provider = "postgresql"
     url      = env("DATABASE_URL")
 }
 
@@ -15,11 +15,11 @@ model Event {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    name    String
-    details String
+    name       String @unique
+    details    String
+    photo_link String
 
-    creator User   @relation(fields: [userId], references: [id])
-    userId  String
+    participants User[]
 }
 
 model User {
@@ -27,5 +27,8 @@ model User {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 
-    createdEvents Event[]
+    first_name String
+    last_name  String
+
+    events Event[]
 }
