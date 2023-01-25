@@ -11,11 +11,11 @@ const Card = (props: CardProps) => {
 
   return (
     <>
-      <div className="card w-[500px] bg-base-100 shadow-xl ">
+      <div className="card h-[50vh] w-[30vw] bg-base-100 shadow-xl ">
         <div className="card-body ">
           <figure>
-            <div className="w-24 rounded-xl">
-              <img src={props.sorce} className="h-24 w-24 object-fill" />
+            <div className="  rounded-xl">
+              <img src={props.sorce} className="h-32 w-32 object-fill" />
             </div>
           </figure>
           <h2 className="card-title">{props.name}</h2>
