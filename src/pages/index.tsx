@@ -12,15 +12,24 @@ const Home: NextPage = () => {
   return (
     <>
       <Navbar />
-      <div className="mx-40 my-20 flex justify-between">
-        {events.data?.map((element) => (
-          <Card
-            name={element.name}
-            sorce={element.photo_link}
-            text={element.details}
-          />
+      <center>
+        <div className="grid grid-cols-2">
+{events.data?.map((element) => (
+        <div className="mx-4 my-4 ">
+          <div className="mt-10">
+            <Card
+              name={element.name}
+              sorce={element.photo_link}
+              text={element.details}
+            />
+          </div>
+          </div>
         ))}
-      </div>
+      
+        </div>
+        
+      </center>
+      
     </>
   );
 };

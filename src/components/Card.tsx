@@ -7,11 +7,11 @@ type CardProps = {
 const Card = (props: CardProps) => {
   return (
     <>
-      <div className="card w-2/5 h-1/2 bg-base-100 shadow-xl ">
+      <div className="card w-[30vw] h-[50vh] bg-base-100 shadow-xl ">
         <div className="card-body ">
            <figure>
-          <div className="w-24 rounded-xl">
-            <img src={props.sorce} className="object-fill h-24 w-24"  />
+          <div className="  rounded-xl">
+            <img src={props.sorce} className="object-fill h-32 w-32"  />
           </div>
         </figure>
           <h2 className="card-title">{props.name}</h2>
