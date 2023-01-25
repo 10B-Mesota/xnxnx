@@ -18,7 +18,10 @@ const Card = (props: CardProps) => {
               <img src={props.sorce} className="h-32 w-32 object-fill" />
             </div>
           </figure>
-          <h2 className="card-title">{props.name}</h2>
+          <center>
+            <h2 className="card-title">{props.name}</h2>
+          </center>
+
           <p className="break-words align-text-top">{props.text}</p>
           <div className="card-actions justify-end">
             <button
