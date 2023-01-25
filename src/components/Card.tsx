@@ -14,7 +14,10 @@ const Card = (props: CardProps) => {
             <img src={props.sorce} className="object-fill h-32 w-32"  />
           </div>
         </figure>
+        <center>
           <h2 className="card-title">{props.name}</h2>
+        </center>
+        
           <p className="align-text-top break-words">{props.text}</p>
           <div className="card-actions justify-end">
             <button className="bg-green-500 text-emerald-100 font-bold py-2 px-4 rounded-full hover:bg-green-700 hover:">Apply now</button>
